@@ -1,0 +1,70 @@
+/* Footer Styles */
+.footer {
+          background-color: #334155;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          font-family: "Orbitron", sans-serif;
+          font-optical-sizing: auto;
+          height: 120px;
+          align-items: center;
+          border-bottom: 3px solid orange;
+}
+
+.footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 2rem;
+}
+
+.footer-title {
+          font-size: 18px;
+          margin-bottom: 10px;
+}
+
+.github-link {
+          text-decoration: none;
+}
+
+.github-icon {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.3s ease;
+          border-radius: 1rem;
+          align-self: center;
+}
+
+.github-icon:hover {
+          transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+          .footer {
+                    padding: 15px;
+          }
+
+          .footer-title {
+                    font-size: 16px;
+          }
+
+          .github-icon {
+                    width: 35px;
+                    height: 35px;
+          }
+}
+
+@media (max-width: 480px) {
+          .footer {
+                    padding: 10px;
+          }
+
+          .footer-title {
+                    font-size: 14px;
+          }
+
+          .github-icon {
+                    width: 30px;
+                    height: 30px;
+          }
+}

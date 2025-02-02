@@ -1,0 +1,244 @@
+/* General Parent Styling */
+.Parent {
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          gap: 20px;
+          background-image: url("images/Contact.jpg");
+          background-attachment: fixed;
+          background-position: center;
+          background-size: cover;
+          min-height: 400px;
+          height: 473px;
+          color: white;
+          font-family: Arial, sans-serif;
+}
+
+/* Contact Form Section */
+.contact-section {
+          flex: 1;
+          width: 300px;
+          max-width: 300px;
+          min-width: 300px;
+          background-color: black;
+          opacity: .8;
+          padding: 2rem;
+          text-align: justify;
+          height: 400px;
+          margin: 2rem;
+          font-family: 'Courier New', Courier, monospace;
+          box-sizing: border-box;
+}
+
+.contact-content {
+          height: 3rem;
+}
+
+.contact-section h2 {
+          font-size: 1.6rem;
+          margin-bottom: 15px;
+          color: blue;
+          word-spacing: normal;
+          text-align: start;
+}
+
+.contact-section p {
+          margin: 0;
+          color: white;
+          font-weight: bold;
+          font-size: 1rem;
+          text-align: justify;
+          word-spacing: -.6rem;
+}
+
+.contact-form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+          padding: 10px;
+          font-size: .65rem;
+          height: .6rem;
+          border: none;
+          border-bottom: 2px solid white;
+          font-family: orbitron;
+}
+
+.contact-form button {
+          padding: 10px 20px;
+          background-color: #05111f;
+          border: none;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+          background-color: #23282f;
+}
+
+/* Contact List Section */
+.contact-list-container {
+          display: grid;
+          grid-template-columns: max-content;
+          background-color: rgb(199, 207, 219);
+          box-sizing: border-box;
+}
+
+/* Hover Info Styling */
+.hover-info {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          display: inline-block;
+          min-width: 200px;
+          text-align: center;
+          z-index: 1000;
+          display: none;
+}
+
+/* Icon Styling */
+.icon-container {
+          display: flex;
+          justify-content: space-between;
+          gap: 2rem;
+          margin: 2rem;
+          flex-wrap: wrap;
+          flex: 1;
+}
+
+.icon-border {
+          border-radius: 50%;
+          background-color: rgb(155, 169, 189);
+          height: 3rem;
+          width: 3rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid rgb(51, 65, 85);
+}
+
+.icon-border:hover {
+          background-color: rgb(51, 65, 85);
+          border: 1px solid rgb(155, 169, 189);
+}
+
+.icon {
+          font-size: 1.3rem;
+          /* Increased size */
+          color: rgb(51, 65, 85);
+          cursor: pointer;
+          transition: transform 0.2s, color 0.2s;
+}
+
+.icon:hover {
+          color: rgb(178, 188, 201);
+          cursor: pointer;
+
+          /* transform: scale(1.5); */
+}
+
+/* Bottom-Right Info */
+.icon-container:hover~.hover-info,
+.icon:hover~.hover-info {
+          display: block;
+
+}
+
+.bottom-right-info {
+          color: rgb(155, 169, 189);
+          height: 2rem;
+
+          .info-text {
+                    border: rgb(51, 65, 85);
+                    background-color: rgb(155, 169, 189);
+                    width: 40%;
+                    height: 2rem;
+                    margin: 0 auto;
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    font-family: orbitron;
+                    font-size: .8rem;
+                    font-weight: 2000;
+                    /* word-spacing: .4rem; */
+                    color: rgb(21, 29, 40);
+          }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+          .Parent {
+                    flex-direction: column;
+                    align-items: center;
+                    height: 780px;
+                    width: ;
+          }
+
+          .contact-content {
+                    h2 {
+                              text-align: left;
+                    }
+          }
+
+          .contact-section,
+          .contact-list-container {
+                    max-width: 100%;
+          }
+
+          .contact-list-container {
+                    grid-template-columns: 1fr;
+                    width: 100%;
+          }
+
+          .hover-info {
+                    position: static;
+                    margin-top: 1rem;
+                    /* Margin below the icons */
+          }
+
+          .icon-container {
+                    display: grid;
+                    height: 7rem;
+                    padding: 3rem;
+                    grid-template-columns: 2fr 2fr 1fr;
+          }
+
+          .icon {
+                    font-size: 1rem;
+                    margin: 0;
+          }
+
+          .icon-border {
+                    height: 2rem;
+                    width: 2rem;
+          }
+
+          .bottom-right-info {
+                    color: rgb(155, 169, 189);
+                    height: 2rem;
+
+                    .info-text {
+                              width: 30%;
+                              height: 2rem;
+                              margin: 0 auto;
+                              border-radius: 1rem;
+                              padding: 1rem;
+                              font-family: sans-serif;
+                              font-size: .6rem;
+                              font-weight: 2000;
+                              color: white;
+                              font-family: orbitron;
+                    }
+          }
+}
